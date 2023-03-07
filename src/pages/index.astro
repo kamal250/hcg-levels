@@ -1,0 +1,29 @@
+---
+// Component Imports
+import LMP from '../components/LMP';
+import HCGLevels from '../components/HCGLevels';
+import ExpectedDate from '../components/ExpectedDate';
+import Notes from '../components/Notes';
+
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Pregnancy calculator & assistant</title>
+	</head>
+	<body>
+		<main>
+			<LMP client:load />
+			<HCGLevels client:visible />
+			<ExpectedDate client:visible />
+			<Notes client:visible />
+		</main>
+	</body>
+</html>
