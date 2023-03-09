@@ -1,8 +1,8 @@
 export default function Notes() {
   return (
     <>
-      <h4>Notes:</h4>
       <ul className="list-disc list-inside">
+        <h4 className="text-lg text-pink-600">Notes:</h4>
         <li>
           This is based on facts available on the internet, it is advisable to
           consult your doctor for more information.

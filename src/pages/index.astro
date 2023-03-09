@@ -1,29 +1,50 @@
 ---
 // Component Imports
-import LMP from '../components/LMP';
-import HCGLevels from '../components/HCGLevels';
-import ExpectedDate from '../components/ExpectedDate';
-import Notes from '../components/Notes';
-
+import LMP from "../components/LMP";
+import HCGLevels from "../components/HCGLevels";
+import ExpectedDate from "../components/ExpectedDate";
+import Notes from "../components/Notes";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Pregnancy calculator & assistant</title>
-	</head>
-	<body>
-		<main>
-			<LMP client:load />
-			<HCGLevels client:visible />
-			<ExpectedDate client:visible />
-			<Notes client:visible />
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Pregnancy Calculator & Assistant</title>
+  </head>
+  <body class="dark:text-sky-900">
+    <header class="container mx-auto px-8 max-w-4xl">
+      <div class="py-6 lg:py-10 mx-auto">
+        <div
+          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-sky-200"
+        >
+          <a href="#"> Pregnancy Calculator & Assistant</a>
+        </div>
+      </div>
+    </header>
+    <section class="container mx-auto px-8 pb-12 mb-12 max-w-4xl">
+      <div class="mx-auto py-10">
+        <main>
+          <LMP client:load />
+          <HCGLevels client:visible />
+          <ExpectedDate client:visible />
+          <Notes client:visible />
+        </main>
+      </div>
+    </section>
+    <footer class="container mx-auto px-8 max-w-4xl">
+      <div class="py-6 lg:py-10 mx-auto">
+        <div
+          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-sky-200"
+        >
+          &copy; 2023 Pregnancy Calculator & Assistant
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

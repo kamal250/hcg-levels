@@ -13,10 +13,10 @@ export default function ExpectedDate() {
     let msg = ``;
     if ($lmpCurrentWeek > 0) {
       if (expectedDate >= moment(moment().toDate(), "DD-MM-YYYY")) {
-        msg = `Your expected date is: ${expectedDate.format("DD-MM-YYYY")}`;
+        msg = `Your expected date is: ${expectedDate.format("Do MMMM, YYYY")}`;
       } else {
         msg = `Congratulations! You are a proud parent since ${expectedDate.format(
-          "DD-MM-YYYY"
+          "Do MMMM, YYYY"
         )}`;
       }
     }
