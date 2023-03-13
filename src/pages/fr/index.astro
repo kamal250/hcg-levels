@@ -1,14 +1,14 @@
 ---
 // Library Imports
 import i18next, { t, changeLanguage } from "i18next";
-import { HeadHrefLangs, Trans } from "astro-i18next/components";
+import { HeadHrefLangs } from "astro-i18next/components";
 // Component Imports
-import LMP from "../components/LMP";
-import HCGLevels from "../components/HCGLevels";
-import ExpectedDate from "../components/ExpectedDate";
-import Notes from "../components/Notes";
+import LMP from "../../components/LMP";
+import HCGLevels from "../../components/HCGLevels";
+import ExpectedDate from "../../components/ExpectedDate";
+import Notes from "../../components/Notes";
 
-changeLanguage("en");
+changeLanguage("fr");
 ---
 
 <html lang={i18next.language}>

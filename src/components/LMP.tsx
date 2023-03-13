@@ -1,6 +1,7 @@
 import { useStore } from "@nanostores/react";
 import moment from "moment";
 import { DayPicker } from "react-day-picker";
+import { t } from "i18next";
 
 import "react-day-picker/dist/style.css";
 import { lmp, lmpCurrentWeek } from "../pregnancyStore";
@@ -14,11 +15,12 @@ export default function LMP() {
   lmpCurrentWeek.set(weeks);
 
   let remainingWeeks = 41;
-  let remainingWeeksMessage = `Select LMP`;
+  let remainingWeeksMessage = t("lmpComponent.select");
   if (weeks > 0 && weeks < 42) {
-    remainingWeeksMessage = `${remainingWeeks - weeks} weeks to go`;
+    // remainingWeeksMessage = `${remainingWeeks - weeks} weeks to go`;
+    remainingWeeksMessage = t("lmpComponent.change");
   } else {
-    remainingWeeksMessage = `Change LMP`;
+    remainingWeeksMessage = t("lmpComponent.change");
   }
 
   // TODO :: Add more specific content
@@ -44,9 +46,7 @@ export default function LMP() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center text-sm m-3">
-              {lmpMessage}
-            </div>
+            <div className="flex items-center justify-center text-sm m-3">{lmpMessage}</div>
           </div>
           {/* TODO :: Replace SVG with vertical bars */}
           <div className="flex items-center">
