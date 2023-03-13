@@ -1,6 +1,7 @@
 import { useStore } from "@nanostores/react";
 import moment from "moment";
 import { DayPicker } from "react-day-picker";
+import { t } from "astro-i18n";
 
 import "react-day-picker/dist/style.css";
 import { lmp, lmpCurrentWeek } from "../pregnancyStore";
@@ -14,11 +15,11 @@ export default function LMP() {
   lmpCurrentWeek.set(weeks);
 
   let remainingWeeks = 41;
-  let remainingWeeksMessage = `Select LMP`;
+  let remainingWeeksMessage = t("lmp.select");
   if (weeks > 0 && weeks < 42) {
-    remainingWeeksMessage = `${remainingWeeks - weeks} weeks to go`;
+    remainingWeeksMessage = t("lmp.change");
   } else {
-    remainingWeeksMessage = `Change LMP`;
+    remainingWeeksMessage = t("lmp.change");
   }
 
   // TODO :: Add more specific content

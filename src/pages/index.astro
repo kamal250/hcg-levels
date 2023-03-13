@@ -1,4 +1,7 @@
 ---
+// Library Imports
+import { astroI18n, t } from "astro-i18n";
+
 // Component Imports
 import LMP from "../components/LMP";
 import HCGLevels from "../components/HCGLevels";
@@ -7,6 +10,7 @@ import Notes from "../components/Notes";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+astroI18n.init(Astro);
 ---
 
 <html lang="en">
