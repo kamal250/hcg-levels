@@ -19,15 +19,15 @@ export default function HCGLevels() {
         } else if ($lmpCurrentWeek == 13) {
           lcw = 14;
         }
-        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-pink-600">${hcgLevels[lcw].min} mIU/mL</span> and <span class="text-pink-600">${hcgLevels[lcw].max} mIU/mL</span>.`;
+        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-primary-focus">${hcgLevels[lcw].min} mIU/mL</span> and <span class="text-primary-focus">${hcgLevels[lcw].max} mIU/mL</span>.`;
       }
       // Second trimester calculations
       else if ($lmpCurrentWeek > 16 && $lmpCurrentWeek <= 29) {
-        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-pink-600">${hcgLevels["secondTrimester"].min} mIU/mL</span> and <span class="text-pink-600">${hcgLevels["secondTrimester"].max} mIU/mL</span>.`;
+        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-primary-focus">${hcgLevels["secondTrimester"].min} mIU/mL</span> and <span class="text-primary-focus">${hcgLevels["secondTrimester"].max} mIU/mL</span>.`;
       }
       // Third trimester calculations
       else if ($lmpCurrentWeek > 29 && $lmpCurrentWeek <= 41) {
-        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-pink-600">${hcgLevels["thirdTrimester"].min} mIU/mL</span> and <span class="text-pink-600">${hcgLevels["thirdTrimester"].max} mIU/mL</span>.`;
+        hcgLevelsMessage = `Expected HCG Level should be between <span class="text-primary-focus">${hcgLevels["thirdTrimester"].min} mIU/mL</span> and <span class="text-primary-focus">${hcgLevels["thirdTrimester"].max} mIU/mL</span>.`;
       }
     }
     return hcgLevelsMessage;

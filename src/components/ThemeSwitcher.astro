@@ -1,0 +1,99 @@
+---
+// Component Imports
+import Cup from "../icons/Cup.astro";
+import Pastel from "../icons/Pastel.astro";
+import Garden from "../icons/Garden.astro";
+import Bumblebee from "../icons/Bumblebee.astro";
+import Boombox from "../icons/Boombox.astro";
+import Rock from "../icons/Rock.astro";
+import Valentine from "../icons/Valentine.astro";
+import Basic from "../icons/Basic.astro";
+import Audio from "../icons/Audio.astro";
+import Winter from "../icons/Winter.astro";
+---
+
+<button
+    data-set-theme="cupcake"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Cupcake"
+>
+    <Cup />
+</button>
+<button
+    data-set-theme="wireframe"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Wireframe"
+>
+    <Basic />
+</button>
+<button
+    data-set-theme="pastel"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Pastel"
+>
+    <Pastel />
+</button>
+<button
+    data-set-theme="garden"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Garden"
+>
+    <Garden />
+</button>
+<button
+    data-set-theme="bumblebee"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Bumblebee"
+>
+    <Bumblebee />
+</button>
+<button
+    data-set-theme="retro"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="90s"
+>
+    <Boombox />
+</button>
+<button
+    data-set-theme="cyberpunk"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Cyber Punk"
+>
+    <Rock />
+</button>
+<button
+    data-set-theme="valentine"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Valentine"
+>
+    <Valentine />
+</button>
+<button
+    data-set-theme="lofi"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Lofi"
+>
+    <Audio />
+</button>
+<button
+    data-set-theme="winter"
+    class="btn btn-sm btn-ghost btn-square"
+    data-act-class="btn-active"
+    title="Winter"
+>
+    <Winter />
+</button>
+
+<script hoist type="module">
+    import { themeChange } from "theme-change";
+    themeChange();
+</script>

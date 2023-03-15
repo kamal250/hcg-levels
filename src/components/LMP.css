@@ -1,0 +1,13 @@
+.my-selected:not([disabled]) { 
+    font-weight: bold; 
+    border: 2px solid currentColor;
+  }
+  .my-selected:hover:not([disabled]) { 
+    border-color: hsl(var(--pf));
+    color: hsl(var(--pf));
+  }
+  .my-today { 
+    font-weight: bold;
+    font-size: 120%; 
+    color: hsl(var(--sf));
+  }

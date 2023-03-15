@@ -1,5 +1,6 @@
 ---
 // Component Imports
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
 import LMP from "../components/LMP";
 import HCGLevels from "../components/HCGLevels";
 import ExpectedDate from "../components/ExpectedDate";
@@ -17,19 +18,22 @@ import Notes from "../components/Notes";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Pregnancy Calculator & Assistant</title>
   </head>
-  <body class="text-sky-900">
+  <body class="text-base-content">
     <header class="container mx-auto px-2 max-w-4xl">
       <div class="py-6 lg:py-10 mx-auto">
         <div
-          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-sky-200"
+          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-accent-content"
         >
           <a href="#"> Pregnancy Calculator & Assistant</a>
+        </div>
+        <div class="flex gap-1 justify-end">
+          <ThemeSwitcher />
         </div>
       </div>
     </header>
     <section class="container mx-auto px-2 pb-2 mb-2 max-w-4xl">
       <div class="mx-auto py-10">
-        <main>
+        <main>          
           <!-- TODO :: Add ovulation calculator -->
           <LMP client:load />
           <HCGLevels client:visible />
@@ -41,7 +45,7 @@ import Notes from "../components/Notes";
     <footer class="container mx-auto px-2 max-w-4xl">
       <div class="py-6 lg:py-10 mx-auto">
         <div
-          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-sky-200"
+          class="flex flex-col flex-wrap items-center py-5 border-t border-b border-accent-content"
         >
           &copy; 2023 Pregnancy Calculator & Assistant
         </div>
